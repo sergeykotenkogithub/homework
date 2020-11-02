@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../src/layout/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- Симантический тег! -->
+      <div class="header">
+        <div class="container">
+          <a class="noDecor" href="index.html">
+            <div class="logo">BRAN<span>D</span></div>
+          </a>
+          <form class="topSearch" action="#">
+            <button class="searchBrowse">
+              Browse
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <input type="text" placeholder="Search for Item..." />
+            <button class="searchButton"><i class="fas fa-search"></i></button>
+          </form>
+          <a class="cart" href="#"><img src="../src/assets/images/cars.jpg" alt="cars" /></a>
+          <button class="myAccount">
+            My Account
+            <i class="fas fa-caret-down"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="topNav">
+      <nav>
+        <!-- Симантический тег навигация -->
+        <a href="index.html"> Home </a>
+        <a href="shoping_cart.html"> Man </a>
+        <a href="single_page.html">Women</a>
+        <a href="product.html">Kids</a>
+        <a href="checkout.html">Accoseriese</a>
+        <a href="#">Featured</a>
+        <a href="#">Hot Deals</a>
+      </nav>
+    </div>
+
+    <!-- Блок Нижн меню -->
+    <div class="newArrivals">
+      <div class="container">
+        <h2 class="newArrivalsText">New Arrivals</h2>
+        <div class="menuSmall">
+          <nav>
+            <!-- Семантический тег -->
+            <a href="#"> Home /</a>
+            <a href="#"> Men /</a>
+            <a href="#"> New Arrivals</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Форма покупки -->
+    <div class="shipping_form_product">
+      <div class="container">
+        <div class="shipping_adress">
+          <h2>01.&ensp;Shipping Adress</h2>
+          <div class="shipping_adress_block">
+            <form class="form_shipping_adress_1" action="#">
+              <div>
+                <h3>Check as a guest or register</h3>
+                <h4>Register with us for future convenience</h4>
+              </div>
+              <div>
+                <p>
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="blankRadio"
+                    id="blankRadio1"
+                    value="option1"
+                    aria-label="..."
+                  />
+                  <span>checkout as guest</span>
+                </p>
+                <p>
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="blankRadio"
+                    value="option1"
+                    aria-label="..."
+                  />
+                  <span>register</span>
+                </p>
+              </div>
+              <div>
+                <h3>register and save time!</h3>
+                <h4>Register with us for future convenience</h4>
+              </div>
+              <div>
+                <h4>
+                  <i class="fas fa-angle-double-right"></i> Fast and easy
+                  checkout
+                </h4>
+                <h4>
+                  <i class="fas fa-angle-double-right"></i> Easy access to your
+                  order history and status
+                </h4>
+              </div>
+              <button class="btn_shipping_product">Continue</button>
+            </form>
+
+            <div class="already_registed">
+              <form class="form_shipping_adress_2" action="#">
+                <h2>Already registed?</h2>
+                <h4>Please log in below</h4>
+                <p>
+                  EMAIL ADDRESS<span>*</span><br><input
+                    type="email"
+                    name="login"
+                  />
+                </p>
+                <p>
+                  PASSWORD<span>*</span><br><input
+                    type="password"
+                    name="pass"
+                  />
+                </p>
+                <h3>* Required Fileds</h3>
+                <button class="btn_shipping_product">Log in</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="billing_order">
+          <div class="billing">02. BILLING INFORMATION</div>
+          <div class="billing">03. SHIPPING INFORMATION</div>
+          <div class="billing">04. SHIPPING METHOD</div>
+          <div class="billing">05. PAYMENT METHOD</div>
+          <div class="billing">06. ORDER REVIEW</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Блок с subscribe и отзывом -->
+    <div class="feedback">
+      <div class="container">
+        <div class="subscribe">
+          <div class="sub_pictures">
+            <img src="../src/assets/images/face.png" alt="face" />
+          </div>
+          <div class="feedback_text">
+            <p class="about_text">
+              “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+              pulvinar purus condimentum a. Aliquam condimentum mattis neque sed
+              pretium”
+            </p>
+
+            <div class="name_about">
+              <h3>Bin Burhan</h3>
+              <p>Dhaka, Bd</p>
+            </div>
+            <div class="line">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="longLine"></div>
+
+        <div class="promotion">
+          <div class="promotion_text">
+            <h3>Subscribe</h3>
+            <p>FOR OUR NEWLETTER AND PROMOTION</p>
+          </div>
+          <div class="click_subscribe">
+            <form class="subcskribe_form" action="#">
+              <input
+                class="subcskribe_text"
+                type="email"
+                placeholder="Enter Your Email"
+                name="emailSubskribe"
+                pattern="^([A-Za-z0-9\.-]+)(@)([a-z0-9-]+)(\.)([a-z0-9]{2,})+$"
+              />
+              <button type="submit" class="subcskribe_button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Компания -->
+
+    <div class="about_brand">
+      <div class="container">
+        <div class="brand_text">
+          <a class="noDecor" href="index.html">
+            <div class="logo logo_feedack">BRAN<span>D</span></div>
+          </a>
+          <p>
+            Objectively transition extensive data rather than cross functional
+            solutions. Monotonectally syndicate multidisciplinary materials
+            before go forward benefits. Intrinsicly syndicate an expanded array
+            of processes and cross-unit partnerships.
+          </p>
+
+          <p>
+            Efficiently plagiarize 24/365 action items and focused
+            infomediaries. Distinctively seize superior initiatives for wireless
+            technologies. Dynamically optimize.
+          </p>
+
+          <!-- <p>> Objectively strategize seamless relationships via resource sucking testing procedures. Proactively
+              cultivate next-generation results for value-added methodologies. Dynamically plagiarize unique
+              methodologies after performance based methodologies. Monotonectally empower stand-alone mindshare rather
+              than ubiquitous opportunities. Dynamically orchestrate resource sucking scenarios after alternative
+              synergy.
+              </p -->
+
+          <!-- <p>
+                  Compellingly envisioneer corporate methods of empowerment before standards compliant technologies.
+                  Objectively facilitate progressive.
+              </p> -->
+        </div>
+
+        <div class="company_block company_column">
+          <div class="company">
+            <h2>COMPANY</h2>
+            <div class="about_company">
+              <a href="#"> Home </a>
+              <a href="#"> Shop</a>
+              <a href="#"> About</a>
+              <a href="#"> How It Works</a>
+              <a href="#"> Contact</a>
+            </div>
+          </div>
+
+          <div class="company">
+            <h2>INFORMATION</h2>
+            <div class="about_company">
+              <a href="#">Tearms & Condition</a>
+              <a href="#"> Privacy Policy</a>
+              <a href="#"> How to Buy </a>
+              <a href="#"> How to Sell </a>
+              <a href="#"> Promotion </a>
+            </div>
+          </div>
+
+          <div class="company">
+            <h2>SHOP CATEGORY</h2>
+            <div class="about_company">
+              <a href="#"> Men </a>
+              <a href="#"> Women</a>
+              <a href="#"> Child</a>
+              <a href="#"> Apparel</a>
+              <a href="#"> Brows All</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <footer>
+        <!-- Симантический тег -->
+        <div class="container">
+          <p class="all_right">&#169; 2017 Brand All Rights Reserved.</p>
+          <div class="social">
+            <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+            <a href="#"> <i class="fab fa-twitter"></i> </a>
+            <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+            <a href="#"> <i class="fab fa-pinterest-p"></i> </a>
+            <a href="#"> <i class="fab fa-google-plus-g"></i> </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- //////////////////////////////// -->
+
+    <!-- Js позунок -->
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script>
+      "use strict";
+      $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 1000,
+        from: 200,
+        to: 500,
+        grid: true,
+      });
+    </script>
+
+    <!-- Скрипт bootstrap -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

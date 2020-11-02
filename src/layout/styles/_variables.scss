@@ -1,0 +1,27 @@
+$frontColor: #f16d7f;
+$backColor: #ffffff;
+$headerFooterColor: #e6e6e6;
+
+%center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%label {
+  width: 540px;
+  @media (max-width: 580px) {
+    width: inherit;
+  }
+}
+
+@mixin heightLabel($_heightLabel) {
+  height: $_heightLabel;
+  @extend %label;
+}
+
+@mixin font($_font-size, $_font-weight, $_font-color) {
+  font-size: $_font-size;
+  font-weight: $_font-weight;
+  color: $_font-color;
+}

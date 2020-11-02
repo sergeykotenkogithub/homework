@@ -1,0 +1,37 @@
+/* single_page */ //   3й макет
+
+.bigProduct {
+  height: 777px;
+  border: solid 1px #eaeaea;
+  background-color: #f7f7f7;
+  // width: 1617px; Если посередине
+  // margin: 0 auto;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.bigPicture {
+  @extend %center;
+  justify-content: space-between;
+
+  div {
+    @extend %center;
+    width: 47px;
+    height: 47px;
+    background-color: #eaeaea;
+  }
+
+  img {
+    min-width: 100px;
+    object-fit: cover;
+    object-position: 60%;
+  }
+}
+
+.fa-angle-left,
+.fa-angle-right {
+  font-size: 24px;
+  color: #f7f7f7;
+}

@@ -1,0 +1,118 @@
+// Блок с названием Featured и ниже 8ю картинками
+
+.featured {
+  @extend %center;
+  flex-direction: column;
+  margin-top: 100px;
+  /* Можно просто text-align:center вместо flex; Учился навыкам flex */
+
+  .fetured-Items {
+    font-size: 30px;
+    font-weight: bold;
+    color: #222222;
+  }
+
+  .featured-text {
+    font-size: 14px;
+    color: #9f9f9f;
+
+    @media (max-width: 350px) {
+      padding-left: 7px;
+    }
+  }
+}
+
+// Блок с 8ю картинками
+
+.featured_buy {
+  min-height: 745px;
+}
+
+.feature_block {
+  display: grid;
+  justify-content: center;
+  text-transform: uppercase;
+  margin-top: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 260px));
+  grid-row-gap: 39px;
+  grid-column-gap: 20px;
+
+  @media (max-width: 549px) {
+    grid-template-columns: auto;
+  }
+}
+
+/*  - Можно использовать как вариант вместо justify-content: space-between;
+  .featuredBuyItem:not(:first-child){
+      margin-left: 30px;
+  }  */
+
+.featuredBuyItem {
+  width: 261px;
+  position: relative;
+  height: 364px;
+
+  .addToCart {
+    display: none;
+    /* box-shadow:  2px 4px 3px 3px rgba(0, 0, 0, 0.16); Интересно смотриться  */
+    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+    width: 261px;
+    height: 279px;
+    position: relative;
+
+    .backColor {
+      width: 123px;
+      height: 39px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 2px #ffffff;
+
+      .cartBuy {
+        color: red;
+        width: 23px;
+        height: 22px;
+      }
+    }
+
+    h2 {
+      padding-left: 8px;
+      font-size: 13px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: $backColor;
+      text-transform: uppercase;
+      padding-top: 5px;
+    }
+
+    .coverAddtoCart {
+      @extend %center;
+      background: rgba(13%, 13%, 13%, 0.7);
+      height: 279px;
+      width: 100%;
+    }
+  }
+
+  &:hover .addToCart {
+    position: absolute;
+    height: 364px;
+    display: block;
+  }
+
+  .name_buy_item {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .price_item {
+    font-size: 16px;
+    font-weight: bold;
+    color: $frontColor;
+    margin-top: 17px;
+  }
+
+  a .img_product_size {
+    width: 261px;
+  }
+}

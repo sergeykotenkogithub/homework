@@ -1,0 +1,48 @@
+.newArrivals {
+  // width: 1617px; Если по середине
+  // margin: 0 auto;
+  @extend %center;
+  height: 148px;
+  background-color: #f8f3f4;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    
+
+    @media (max-width: 450px) {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.menuSmall a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #636363;
+
+  &:not(:last-of-type) {
+    font-weight: 300;
+  }
+
+  &:last-of-type {
+    color: $frontColor;
+    font-weight: 700;
+  }
+
+  &:hover:not(:last-of-type) {
+    color: #f16d7f;
+    text-shadow: 0.2px 0.2px 0 #f16d7f, 0.2px -0.2px 0 #f16d7f,
+      -0.2px 0.2px 0 #f16d7f, -0.2px -0.2px 0 #f16d7f, 0.2px 0px 0 #f16d7f,
+      0px 0.2px 0 #f16d7f, -0.2px 0px 0 #f16d7f, 0px -0.2px 0 #f16d7f;
+    /* text-shadow: 0 0 0.9px #f16d7f, 0 0 0.9px #f16d7f, 0 0 0.9px #f16d7f; Как ещё один способ, но тени более видны*/
+  }
+}
+
+.newArrivalsText {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 0.83;
+  color: #f16d7f;
+}

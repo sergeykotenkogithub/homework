@@ -1,0 +1,112 @@
+// 1 макет
+
+// Кнопка allproduct
+.allProduct {
+  text-align: center;
+  margin-top: 79px;
+
+  .allProduct_click {
+    width: 212px;
+    height: 48px;
+    background-color: $frontColor;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    color: $backColor;
+  }
+}
+
+// Блок offer_for_women
+
+.offer_for_women {
+  margin-top: 113px;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 1185px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 570px) {
+      justify-content: center;
+      grid-template-columns: 1fr;
+    }
+
+    .offer_picture {
+      background: url(../../assets/images/offer.jpg) no-repeat;
+      background-position-x: 80%;
+      width: 767px;
+      height: 529px;
+      font-size: 53.5px;
+      letter-spacing: 1.34px;
+      color: #ffffff;
+      padding-top: 149px;
+      padding-left: 39px;
+      box-sizing: border-box;
+      /* float: left; */
+
+      @media (max-width: 1185px) {
+        width: inherit;
+      }
+
+      span {
+        color: #f16d7f;
+      }
+
+      div {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.advantages {
+  background-color: #222224;
+  width: 373px;
+  height: 529px;
+  /* float: right;  */
+
+  @media (max-width: 1185px) {
+    width: auto;
+  }
+}
+
+.advantages_container {
+  width: 298px;
+  margin: 0 auto;
+}
+
+.advantages_text {
+  margin-top: 48px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fbfbfb;
+}
+
+.advantages_text img {
+  float: left;
+  padding-right: 30px;
+}
+
+.advantages_text h2 {
+  padding-left: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #fbfbfb;
+}
+
+.advantages_text p {
+  padding-left: 80px;
+  padding-top: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: justify;
+  color: #fbfbfb;
+  line-height: 1.71;
+  margin: 0;
+}

@@ -1,0 +1,416 @@
+// Bootstap!!!!!!!!
+
+.all_shopinh {
+  margin-top: 59px;
+
+  .container {
+    display: flex;
+
+    @media (max-width: 870px) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.category {
+  margin-top: 10px;
+}
+
+.btn_one_product {
+  width: 243px;
+
+  @media (max-width: 870px) {
+    width: 100%;
+  }
+}
+
+.category_cart {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 18px;
+}
+
+.card-header_product {
+  padding: 0;
+  height: 37px;
+  // border-left: 5px solid #ef5b70;
+  border-radius: 0;
+  border-bottom: 1px solid #ebebeb;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 5px;
+    height: 37px;
+    background-color: #ef5b70;
+  }
+}
+
+.mb-0-product {
+  background: white;
+}
+
+.btn_product_click {
+  @include font(14px, 700, #6f6e6e);
+  display: flex;
+  justify-content: space-between;
+
+  &:hover {
+    color: #ef5b70;
+    text-decoration: none;
+    border: 1px solid #ebebeb;
+  }
+
+  &:active {
+    color: #ef5b70;
+    text-decoration: none;
+    border: 1px solid #ebebeb;
+  }
+
+  // Убирает подчёркивание и тени после активации в bootstrap!!
+  &:not(:disabled):not(.disabled) {
+    text-decoration: none;
+    // border: none; Если вдпуг не нужен
+  }
+
+  &:focus,
+  .btn_product_click.focus {
+    box-shadow: none;
+  }
+}
+
+.noDecorate_product {
+  text-decoration: none;
+  @include font(14px, 400, #6f6e6e);
+
+  &:hover {
+    text-decoration: none;
+    @include font(14px, 400, #ef5b70);
+  }
+}
+
+.card-body_product div:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+// Выбор товаров и товары
+
+.all_product {
+  margin-top: 18px;
+  margin-left: 50px;
+  width: 100%;
+
+  @media (max-width: 870px) {
+    margin-left: 0px;
+  }
+}
+
+.trending_now {
+  div {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 176px;
+
+    a {
+      text-decoration: none;
+      color: #6f6e6e;
+    }
+
+    h4 {
+      @include font(14px, 400, #6f6e6e);
+      &:not(:nth-child(3n)) {
+        padding-right: 5px;
+        border-right: 1px solid #6f6e6e;
+      }
+
+      // Кроме 3го и последнего
+      &:not(:nth-child(3n + 1)) {
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.block_form_product {
+  display: flex;
+  justify-content: space-between;
+  max-width: 847px;
+  flex-wrap: wrap;
+
+  @media (max-width: 996px) {
+    justify-content: space-around;
+  }
+
+  h3 {
+    @include font(14px, 700, #6f6e6e);
+  }
+}
+
+.size_product_form_block {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 235px;
+  margin-top: 26px;
+
+  div {
+    @include font(14px, 400, #6f6e6e);
+    display: inline-block;
+    width: 46px;
+
+    &:not(:nth-child(4n + 1)) {
+      margin-left: 17px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 4px;
+    }
+  }
+}
+
+.price_product_form {
+  width: 263px;
+
+  .range_product_form {
+    input {
+      width: 259px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      background-color: #ccc;
+      color: #000;
+    }
+  }
+
+  .price_form {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.sort_product {
+  margin-top: 41px;
+  background-color: #f3f3f3;
+  max-width: 817px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  .sort {
+    @extend %center;
+    justify-content: start;
+    width: 153px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #ebebeb;
+    margin-left: 9px;
+
+    a {
+      text-decoration: none;
+      color: #6f6e6e;
+    }
+
+    .sortby {
+      width: 65px;
+      border-right: 1px solid #000;
+      padding-left: 5px;
+    }
+    .sortby_2 {
+      position: relative;
+      display: inline-block;
+      margin-left: 9px;
+
+      .dropbtn_product {
+        border: none;
+        outline: none;
+        background: none;
+        padding-right: 15px;
+      }
+      .dropdown-content_product {
+        display: none;
+        position: absolute;
+        z-index: 1;
+
+        a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          background: white;
+          width: 50px;
+          margin-left: -6px;
+          &:hover {
+            color: #ef5b70;
+          }
+        }
+      }
+
+      .dropdown_content_2 a {
+        width: 80px;
+      }
+
+      &:hover .dropdown-content_product {
+        display: block;
+      }
+    }
+  }
+
+  .show_product {
+    height: 30px;
+    width: 119px;
+    background-color: #ffffff;
+    border: 1px solid #ebebeb;
+    margin-left: 10px;
+    a {
+      text-decoration: none;
+      color: #6f6e6e;
+    }
+    .sortby2 {
+      width: 56px;
+    }
+  }
+}
+
+.all_product_show_category {
+  margin-top: 48px;
+
+  .featuredBuyItem {
+    margin-bottom: 36px;
+  }
+
+  .show_category {
+    display: grid;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 261px);
+
+    @media (max-width: 1120px) {
+      grid-template-columns: repeat(2, 261px);
+      justify-content: space-around;
+    }
+
+    @media (max-width: 570px) {
+      grid-template-columns: repeat(1, 261px);
+    }
+  }
+}
+
+.page-link {
+  border: none;
+  color: #c4c4c4;
+  &:hover {
+    color: #ef5b70;
+  }
+}
+
+.next_product_all {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    @include font(16px, 600, #ef5b70);
+    width: 150px;
+    height: 44px;
+    background-color: #ffffff;
+    border: 2px solid #ef5b70;
+    border-radius: 3px;
+  }
+}
+
+.pagination {
+  border: 1px solid #ebebeb;
+}
+
+.advantages_product_page {
+  margin-top: 110px;
+  height: 341px;
+  background-color: #222224;
+
+  @media (max-width: 550px) {
+    height: 515px;
+  }
+
+  .container {
+    @extend %center;
+    justify-content: space-between;
+    height: inherit;
+
+    @media (min-width: 551px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 955px) {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (max-width: 550px) {
+      justify-content: center;
+      padding: 20px 0;
+    }
+  }
+}
+
+.free_delivery {
+  max-width: 309px;
+  @extend %center;
+  flex-direction: column;
+
+  h3 {
+    margin-top: 20px;
+    @include font(20px, 700, #fbfbfb);
+  }
+  p {
+    margin-top: 3px;
+    @include font(14px, 300, #fbfbfb);
+  }
+}
+
+.dropdown_menu_category {
+  width: 243px;
+
+  @media (max-width: 870px) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// Ползунки
+
+.irs-with-grid .irs-grid {
+  display: none !important;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
+
+// Много imortant так как не нашёл другого способа изменить эти ползунки
+
+.irs--flat .irs-handle > i:first-child {
+  border: 1px #f16d7f !important;
+  width: 14px !important;
+  border-radius: 50% !important;
+}
+
+.irs--flat .irs-bar {
+  background: #f16d7f !important;
+}
+
+.irs-from {
+  display: none !important;
+}
+
+.irs-to {
+  display: none !important;
+}

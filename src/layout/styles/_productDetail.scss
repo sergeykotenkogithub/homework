@@ -1,0 +1,292 @@
+/* 2-й макет */
+
+.productDetail {
+  margin-top: 90px;
+
+  @media (max-width: 830px) {
+    margin-top: 0px;
+  }
+}
+
+.productChoose {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @media (max-width: 830px) {
+    display: none;
+  }
+}
+
+.productChoose h2,
+.name_choose_product1,
+.name_choose {
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  line-height: 1.54;
+  letter-spacing: -0.2px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.productChoose h2:first-child {
+  width: 365px;
+}
+
+.productChoose h2:last-child {
+  margin-left: -9px;
+}
+
+.horizontal {
+  border: solid 1px #eaeaea;
+}
+
+.choose {
+  display: flex;
+  margin-top: 22px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+
+  @media (max-width: 450px) {
+    justify-content: space-around;
+  }
+}
+
+.choose_you {
+  display: flex;
+  width: 365px;
+
+  @media (max-width: 830px) {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(50px, 150px));
+    margin: 20px 0;
+    border-bottom: 2px dashed #eaeaea;
+  }
+}
+
+.choose_text {
+  margin-left: 21px;
+  width: 255px;
+  @media (max-width: 830px) {
+    width: 85px;
+  }
+  @media (max-width: 830px) {
+    width: 74px;
+  }
+}
+
+.choose_text h2 {
+  font-size: 13px;
+  color: #222222;
+  margin-top: 13px;
+  margin-bottom: 38px;
+}
+
+.choose_text p {
+  font-size: 13px;
+  line-height: 1.54;
+  color: #575757;
+  font-weight: 600;
+  margin-bottom: 0rem;
+
+  @media (max-width: 830px) {
+    margin-bottom: 1rem;
+  }
+}
+.choose_text span {
+  color: #6f6e6e;
+  font-weight: normal;
+}
+
+.choose_number {
+  width: 54px;
+  height: 30px;
+  border: solid 1px #eaeaea;
+  background-color: #ffffff;
+  text-align: center;
+  margin-top: -15px;
+}
+
+.fa-times-circle {
+  color: #c0c0c0;
+  margin-right: 18px;
+}
+
+.fa_margin {
+  margin-top: -15px;
+}
+
+.name_choose {
+  display: none;
+  @media (max-width: 830px) {
+    display: block;
+    padding-top: 5px;
+  }
+}
+
+.name_choose_product1 {
+  display: none;
+  @media (max-width: 830px) {
+    display: grid;
+    align-items: center;
+  }
+}
+
+.choose_margin {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #656565;
+  @media (max-width: 450px) {
+    margin: 15px;
+  }
+}
+
+// 2 кнопки после блоков с картинками и ценами
+
+.shopping {
+  margin-top: 44px;
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+
+  @media (min-width: 530px) {
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 235px);
+  }
+
+  button {
+    width: 235px;
+    height: 50px;
+    border: solid 1px #eaeaea;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4a4a4a;
+  }
+}
+
+// Adress
+
+.end_buy {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 63px;
+  flex-wrap: wrap;
+
+  @media (max-width: 1079px) {
+    justify-content: space-around;
+  }
+}
+
+.adress h2 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.adress_shipping {
+  display: flex;
+  flex-direction: column;
+}
+
+.adress_shipping input {
+  margin-top: 20px;
+  width: 345px;
+  height: 45px;
+  border: solid 1px #eaeaea;
+  padding-left: 17px;
+  box-sizing: border-box;
+
+  @media (max-width: 365px) {
+    width: 290px;
+  }
+}
+
+.adress_shipping button {
+  text-transform: uppercase;
+  margin-top: 23px;
+  width: 100px;
+  height: 35px;
+  border: solid 1px #eaeaea;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.coupon {
+  @media (max-width: 719px) {
+    margin-top: 20px;
+  }
+}
+
+.coupon h2 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.coupon p {
+  margin-top: 28px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.coupon_click {
+  width: 118px;
+  height: 35px;
+}
+
+.checkout {
+  width: 360px;
+  height: 214px;
+  background-color: #f5f3f3;
+
+  @media (max-width: 1079px) {
+    margin-top: 20px;
+  }
+}
+
+.container_checkout {
+  width: 273px;
+  height: inherit;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.container_checkout p {
+  text-align: right;
+  font-size: 11px;
+  margin-top: 40px;
+}
+
+.container_checkout h2 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 14px;
+}
+
+.container_checkout div {
+  width: 273px;
+  height: 1px;
+  border: 1px solid #e2e2e2;
+  margin-top: 22px;
+}
+
+.container_checkout button {
+  width: 273px;
+  height: 50px;
+  background-color: #f16d7f;
+  border: none;
+  margin-top: 17px;
+  text-transform: uppercase;
+  color: #ffffff;
+}

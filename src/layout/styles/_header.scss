@@ -1,0 +1,250 @@
+.header {
+  height: 100px;
+  border-bottom: solid 1px #ececec;
+
+  @media (max-width: 990px) {
+    height: auto;
+  }
+
+  .container {
+    display: grid;
+    align-items: center;
+    height: inherit;
+    grid-template-columns: 202px 400px 1fr 156px;
+    justify-content: center;
+
+    @media (max-width: 991px) {
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr 1fr;
+      margin-top: 15px;
+      gap: 5px;
+    }
+
+    .myAccount {
+      width: 130px;
+      height: 38px;
+      background-color: $frontColor;
+      font-size: 15px;
+      color: $backColor;
+      border: none;
+      margin-left: 26px;
+
+      @media (max-width: 991px) {
+        grid-row: 3;
+      }
+    }
+
+    .img_Cart_header {
+      display: flex;
+      justify-content: flex-end;
+      width: 20px;
+      margin-left: auto;
+    }
+  }
+}
+
+.noDecor {
+  text-decoration: none !important;
+  color: #222222 !important;
+
+  @media (max-width: 991px) {
+    display: grid;
+    justify-content: center;
+  }
+
+  .logo {
+    @extend %center;
+    width: 165px; /* Потому что блок с логотипом и названием BRAND */
+    height: 51px;
+    background: url(../../assets/images/logo.jpg) no-repeat left center;
+    padding-left: 72px;
+    font-size: 27px;
+    font-weight: 300;
+    box-sizing: border-box;
+    margin-right: 37px;
+
+    span {
+      color: $frontColor;
+      font-weight: 900;
+    }
+  }
+}
+
+.topSearch {
+  display: flex;
+  height: 38px;
+  border: solid 1px $headerFooterColor;
+  border-radius: 3px 3px 3px 3px;
+  overflow: hidden; /* то что вылазит за блоком\тегом будет скрыто */
+  /* По умолчанию  justify-content: идёт flex-star поэтому они приклеились, нет расстояния */
+
+  .searchBrowse {
+    width: 87px;
+    border: none;
+    background-image: linear-gradient(to top, #f9f9f9, #f5f5f5);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.35px;
+    color: #222222;
+  }
+
+  input {
+    border: solid 1px $headerFooterColor;
+    border-top: none;
+    border-bottom: none;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    outline: none;
+    width: 279px;
+
+    @media (max-width: 450px) {
+      width: auto;
+    }
+
+    @media (max-width: 350px) {
+      width: 150px;
+    }
+  }
+
+  .searchButton {
+    width: 36px;
+    border: none;
+    background: none;
+    color: #a4a4a4;
+  }
+}
+
+.fa-search {
+  width: 25px;
+}
+
+.cart {
+  margin-left: auto;
+
+  &:hover {
+    transform: scale(2, 2);
+  }
+
+  img {
+    @media (max-width: 991px) {
+      margin-left: -125px;
+      margin-top: -45px;
+      position: absolute;
+    }
+
+    @media (max-width: 350px) {
+      margin-left: -55px;
+    }
+  }
+}
+
+.buyCart {
+  margin-left: -350px;
+  position: absolute;
+  border: 1px solid #eaeaea;
+  width: 365px;
+  background: white;
+  margin-top: 40px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 55%;
+  padding: 20px 20px;
+  border-radius: 2%;
+  box-shadow: 10px 14px 15px 3px rgba(0, 0, 0, 0.43);
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .fa-star {
+    color: #ffd700;
+  }
+
+  img {
+    height: 120px;
+  }
+
+  button {
+    width: 100%;
+    padding: 20px;
+    border: solid 2px #eaeaea;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin: 5px 0;
+  }
+
+  .priceBuyCart {
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .cartHorizontal {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .textByCart {
+    font-size: 12px;
+    font-weight: 900;
+    width: 130px;
+  }
+
+  .textCenterCart {
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .priceCart {
+    color: #e47a89;
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .faCart {
+    font-size: 20px;
+  }
+
+  .priceTextTotal {
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+.img_Cart_header:hover .buyCart {
+  display: flex;
+  color: black;
+}
+
+.cartBuyItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartFlex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.cartCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newBackColor {
+  color: #ffffff;
+  font-size: 13px;
+  background: none;
+}

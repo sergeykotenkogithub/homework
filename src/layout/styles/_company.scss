@@ -1,0 +1,133 @@
+.about_brand {
+  margin-top: 109px;
+  @media (max-width: 970px) {
+    margin-top: 0px;
+  }
+}
+
+.about_brand .container {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 970px) {
+    flex-direction: column;
+  }
+}
+.brand_text {
+  margin-right: 64px;
+  @media (max-width: 970px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0px;
+  }
+
+  .logo_feedack {
+    @media (max-width: 970px) {
+      margin-top: 60px;
+    }
+  }
+
+  p {
+    margin-top: 29px;
+    max-width: 427px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    letter-spacing: 0.35px;
+    color: #898989;
+
+    /* text-align: justify; Еслси вдруг необходимо */
+  }
+}
+
+.company_block {
+  display: flex;
+  justify-content: space-between;
+  width: 608px;
+  @media (max-width: 970px) {
+    display: flex;
+    margin-top: 20px;
+    width: auto;
+  }
+
+  @media (max-width: 485px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 450px) {
+    align-items: center;
+  }
+}
+
+// Для страницы checkout
+.company_column {
+  @media (max-width: 970px) {
+    flex-direction: column;
+  }
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 485px) {
+    margin-top: 25px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.44;
+    letter-spacing: 0.45px;
+    color: #f16d7f;
+
+    @media (max-width: 970px) {
+      display: grid;
+      justify-content: center;
+      margin-top: 25px;
+    }
+  }
+}
+
+.about_company {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 33px;
+  box-sizing: border-box;
+
+  @media (max-width: 970px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+  }
+}
+
+.about_company a {
+  text-decoration: none;
+  color: #898989;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 2.63;
+  letter-spacing: 0.4px;
+}
+
+.about_company a:hover {
+  color: #f16d7f;
+  text-shadow: 0 0 0.9px #f16d7f, 0 0 0.9px #f16d7f, 0 0 0.9px #f16d7f;
+}
+
+.footer {
+  background: #e6e6e6;
+  margin-top: 89px;
+  // width: 1617px; Если по центру надо
+  // margin: 0 auto;
+}

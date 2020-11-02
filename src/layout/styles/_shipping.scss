@@ -1,0 +1,175 @@
+.shipping_form_product {
+  margin-top: 89px;
+
+  h2 {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.form_shipping_adress_1 {
+  margin-left: 35px;
+  margin-top: 39px;
+  width: 259px;
+  height: 342px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: 724px) {
+    margin-left: 80px;
+  }
+
+  @media (max-width: 380px) {
+    margin-left: 0px;
+  }
+
+  h3 {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  h4 {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #b3b2b2;
+  }
+  p {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  span {
+    position: absolute;
+    margin-top: 5px;
+  }
+}
+
+// Форма бутстра
+
+.form-check {
+  padding-left: 0;
+}
+
+.form-check-input {
+  position: inherit;
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.btn_shipping_product {
+  width: 180px;
+  height: 50px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4a4a4a;
+}
+
+.shipping_adress_block {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 724px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 380px) {
+    justify-content: flex-start;
+  }
+}
+
+.form_shipping_adress_2 {
+  margin-top: 39px;
+  height: 342px;
+  max-width: 391px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 291px;
+
+  @media (max-width: 1005px) {
+    margin-left: 140px;
+  }
+
+  @media (max-width: 854px) {
+    margin-left: 50px;
+  }
+
+  @media (max-width: 764px) {
+    margin-left: 10px;
+  }
+
+  @media (max-width: 724px) {
+    align-items: center;
+  }
+
+  @media (max-width: 380px) {
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  h2 {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+  }
+  h4 {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #b3b2b2;
+  }
+  p {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #222222;
+
+    span {
+      font-size: 17px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #ff0d0d;
+    }
+
+    input {
+      width: 390px;
+      height: 45px;
+
+      @media (max-width: 425px) {
+        width: 280px;
+      }
+    }
+  }
+  h3 {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #ff0d0d;
+  }
+}
+
+.billing_order {
+  margin-top: 79px;
+}
+
+.billing {
+  padding: 33px 0;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+}
