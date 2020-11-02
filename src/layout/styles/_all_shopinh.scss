@@ -300,10 +300,10 @@
 }
 
 .page-link {
-  border: none;
-  color: #c4c4c4;
+  border: none !important;
+  color: #c4c4c4 !important;
   &:hover {
-    color: #ef5b70;
+    color: #ef5b70 !important;
   }
 }
 
