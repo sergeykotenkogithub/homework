@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
@@ -11,7 +11,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../src/layout/styles/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
@@ -29,30 +34,38 @@
             </button>
             <input type="text" placeholder="Search for Item..." />
             <button class="searchButton"><i class="fas fa-search"></i></button>
-          </form>          
+          </form>
+
+          <!-- Подгрузка с Js корзины  -->
           <div id="basket">
-            <div class="img_Cart_header" > <img class="cart" src="../src/assets/images/cars.jpg" alt="cars" />          
-             <div class="buyCart" id="basket-inner">
-                <div class="cartBuyItems" id="basket-items">
-                          
-                </div>             
-                
+            <div class="img_Cart_header">
+              <div class="cartScale">
+                <img
+                  class="cart"
+                  src="../src/assets/images/cars.jpg"
+                  alt="cars"
+                /><span class="cartNumber">2</span>
+              </div>
+              <div class="buyCart" id="basket-inner">
+                <div class="cartBuyItems" id="basket-items"></div>
+
                 <div class="priceBuyCart">
                   <div class="priceTextTotal">TOTAL:</div>
-                  <p class="priceTextTotal">$ <span id="basket-sum">500.00</span> </p>
-                </div>              
+                  <p class="priceTextTotal">
+                    $ <span id="basket-sum">500.00</span>
+                  </p>
+                </div>
                 <button>CHECKOUT</button>
                 <button>GO TO CART</button>
-                
               </div>
-            </div>            
-          </div> 
+            </div>
+          </div>
 
           <!-- Мой аккаунт кнопка -->
           <button class="myAccount">
             My Account
             <i class="fas fa-caret-down"></i>
-          </button>        
+          </button>
         </div>
       </div>
     </header>
@@ -79,7 +92,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="topOffer">
       <div class="container">
         <div class="hotDeal">
@@ -108,7 +121,6 @@
         </div>
       </div>
     </div>
-   
 
     <!-- Featured -->
     <div class="featured">
@@ -118,22 +130,19 @@
       </div>
     </div>
 
-    <!-- Блок с 8ю картинками -->     
+    <!-- Блок с 8ю картинками -->
     <div class="featured_buy">
-      <div class="container">        
-
+      <div class="container">
         <!-- Тут вставляется catalog.js -->
         <div class="feature_block" id="catalog">
-
-
           <!-- 1 картинка -->
           <!-- <div class="featuredBuyItem">
             <a href="#">
               <div class="addToCart">
                 <div class="coverAddtoCart">
                   <div class="backColor"> -->
-                    <!-- Задний фон картинки -->
-                    <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
+          <!-- Задний фон картинки -->
+          <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
                     <h2>Add to Cart</h2>
                   </div>
                 </div>
@@ -150,8 +159,8 @@
               <div class="addToCart">
                 <div class="coverAddtoCart">
                   <div class="backColor"> -->
-                    <!-- Задний фон картинки -->
-                    <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
+          <!-- Задний фон картинки -->
+          <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
                     <h2>Add to Cart</h2>
                   </div>
                 </div>
@@ -169,7 +178,7 @@
                 <div class="coverAddtoCart">
                   <div class="backColor">
                     Задний фон картинки -->
-                    <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
+          <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
                     <h2>Add to Cart</h2>
                   </div>
                 </div>
@@ -187,7 +196,7 @@
                 <div class="coverAddtoCart">
                   <div class="backColor">
                     Задний фон картинки -->
-                    <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
+          <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
                     <h2>Add to Cart</h2>
                   </div>
                 </div>
@@ -206,7 +215,7 @@
                 <div class="coverAddtoCart">
                   <div class="backColor">
                     Задний фон картинки -->
-                    <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
+          <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
                     <h2>Add to Cart</h2>
                   </div>
                 </div>
@@ -224,7 +233,7 @@
                 <div class="coverAddtoCart">
                   <div class="backColor">
                     Задний фон картинки -->
-                    <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
+          <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
                     <h2>Add to Cart</h2>
                   </div>
                 </div>
@@ -241,7 +250,7 @@
                 <div class="coverAddtoCart">
                   <div class="backColor">
                     Задний фон картинки -->
-                    <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
+          <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
                     <h2>Add to Cart</h2>
                   </div>
                 </div>
@@ -258,7 +267,7 @@
                 <div class="coverAddtoCart">
                   <div class="backColor">
                     Задний фон картинки -->
-                    <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
+          <!-- <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
                     <h2>Add to Cart</h2>
                   </div>
                 </div>
@@ -290,7 +299,11 @@
         <div class="advantages">
           <div class="advantages_container">
             <div class="advantages_text">
-              <img class="advantages_picture" src="../src/assets/images/car.svg" alt="car" />
+              <img
+                class="advantages_picture"
+                src="../src/assets/images/car.svg"
+                alt="car"
+              />
               <h2>Free Delivery</h2>
               <p>
                 Worldwide delivery on all. Authorit tively morph next-generation
@@ -451,19 +464,15 @@
       </footer>
     </div>
 
-
-
-
     <script src="../src/components/index/basket.js"></script>
     <script src="../src/components/index/catalog.js"></script>
 
     <script>
       var basket = initBasket();
       basket.init();
-      
+
       var catalog = initCatalog();
       catalog.init(basket);
     </script>
-
   </body>
 </html>
