@@ -102,7 +102,7 @@ function renderBasketTemplate(item, i) {
             <i class="far fa-star"></i>
         </div>                  
         <div class="priceCart">
-            ${item.productAmount} x <span>${item.productPrice}</span> = $134
+            ${item.productAmount} x <span>${item.productPrice}</span> = ${item.productAmount * item.productPrice}
         </div>
         </div>
         <div class="cartCircle">
