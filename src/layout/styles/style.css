@@ -155,7 +155,7 @@
   width: 365px;
   background: white;
   margin-top: 40px;
-  display: none;
+  display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -232,12 +232,6 @@
     font-weight: 700;
     font-size: 20px; }
 
-.img_Cart_header:hover .buyCart {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: black; }
-
 .cartBuyItems {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -286,6 +280,9 @@
   -webkit-transform: scale(2, 2);
   -ms-transform: scale(2, 2);
   transform: scale(2, 2); }
+
+.hidden {
+  display: none !important; }
 
 .topNav nav {
   -ms-flex-wrap: wrap;

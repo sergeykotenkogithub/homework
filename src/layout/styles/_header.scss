@@ -142,7 +142,7 @@
   width: 365px;
   background: white;
   margin-top: 40px;
-  display: none;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -218,10 +218,10 @@
   }
 }
 
-.img_Cart_header:hover .buyCart {
-  display: flex;
-  color: black;
-}
+// .img_Cart_header:hover .buyCart {
+//   display: flex;
+//   color: black;
+// }
 
 .cartBuyItems {
   display: flex;
@@ -259,4 +259,8 @@
 
 .cartScale:hover {
   transform: scale(2, 2);
+}
+
+.hidden {
+  display: none !important;
 }

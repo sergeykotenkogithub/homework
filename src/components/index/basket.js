@@ -14,14 +14,17 @@ function initBasket() {
         wrapper: null, //basket all
         sum: 0, // 
         totalContainer: null,
-
+        clickCart: null,
         // Инициализация. Основное
         init() { 
+            this.clickCart = document.querySelector('#clickCart');
             this.container = document.querySelector('#basket-items');
             this.wrapper = document.querySelector('#basket-inner');
             this.totalContainer = document.querySelector('#basket-sum');
             this.items = getBasketItems(TITLES, PRICES, AMOUNTS);
             this._render();
+            this._handleEvents();
+            // this._handleEvents2()
         },
         _render() {
             let htmlStr = '';
@@ -44,18 +47,30 @@ function initBasket() {
         },
 
         // ДЗ
-        add(item) {
+        add(item) {      
+            // Незнаю как сделать так чтоб добавлялись  именно те элементы которые надо      
+            this.items.push(item);
+            this._render();
            console.log(item);
            //если товара в корзине нет, то его надо добавить
            //если он там уже есть, то добавить количество
            // перерендер (соотв и персчет)
         },
-        _remove() {
+        _remove() {            
             //реализовать
         },
-        _handleEvents() {
-            // +++ организовать скрытие/показ корзины по клику а не по ховеру
-        }
+        _handleEvents() {          
+           document.querySelector('#basket-btn').addEventListener('click', e => {
+            this.wrapper.classList.toggle('hidden')
+            // toggle убирает класс, а если есть то добовляет, вот и получается что при нажатиее он показывается, а при втором закрывается (hidden в _header.scss)
+           })          
+        },
+        // _handleEvents2() {
+        //     document.addEventListener("click", event => {
+        //         if(event.target.offsetParent.id != 'clickCart')
+        //         this.wrapper.style.display="none";
+        //     }
+        // )},
     }
 
     return basket
