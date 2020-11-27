@@ -260,6 +260,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .cartCircle a {
+    color: none; }
+    .cartCircle a:hover {
+      color: black; }
 
 .newBackColor {
   color: #ffffff;
@@ -277,9 +281,12 @@
   margin-left: -10px; }
 
 .cartScale:hover {
-  -webkit-transform: scale(2, 2);
-  -ms-transform: scale(2, 2);
-  transform: scale(2, 2); }
+  -webkit-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  -webkit-transition: 0.45s;
+  -o-transition: 0.45s;
+  transition: 0.45s; }
 
 .hidden {
   display: none !important; }
@@ -2043,3 +2050,8 @@ body {
 .container {
   max-width: 1140px;
   margin: 0 auto; }
+
+a {
+  text-decoration: none !important; }
+  a:hover {
+    color: none; }

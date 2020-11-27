@@ -238,6 +238,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  a {
+    color: none;
+
+    &:hover {
+      color: black;
+    }
+  }
 }
 
 .newBackColor {
@@ -258,7 +266,8 @@
 }
 
 .cartScale:hover {
-  transform: scale(2, 2);
+  transform: scale(1.2, 1.2);
+  transition: 0.45s;
 }
 
 .hidden {
