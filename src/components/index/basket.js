@@ -74,6 +74,7 @@ function initBasket() {
            //если он там уже есть, то добавить количество
            // перерендер (соотв и персчет)
         },
+        // 
         _remove(id) {            
             let find = this.items.find(el => el.productId == id);
 
