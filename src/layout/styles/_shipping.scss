@@ -57,9 +57,10 @@
 }
 
 .form-check-input {
-  position: inherit;
-  margin-left: 0;
+  position: inherit !important;
+  margin-left: 0 !important;
   margin-right: 5px;
+  margin-top: 0.4rem !important;
 }
 
 .btn_shipping_product {
