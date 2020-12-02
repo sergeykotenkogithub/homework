@@ -1033,6 +1033,13 @@
     .forKids {
       margin-top: 0; } }
 
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 1129px !important; } }
+
 .featured {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

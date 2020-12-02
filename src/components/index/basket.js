@@ -1,10 +1,10 @@
     class Query {
-        constructor(block) {
-            this.block = block
+        constructor(query) {
+            this.query = query
             this.init()
         }
         init(){
-          return document.querySelector(this.block)
+          return document.querySelector(this.query)
         }
     }
 
@@ -18,11 +18,11 @@
     const basket = {
         items: [], // массив с товара и ценами
         url: 'https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/basket.json',
+        sum: 0,
         // container: null, // basket-items (В DOM <div> с товарами и ценами)
         // wrapper: null, //basket all
-        sum: 0, // 
+         // 
         // totalContainer: null,
-        clickCart: null,
         // Инициализация. Основное
         init() { 
             
