@@ -1,4 +1,4 @@
-function initBasket() {
+// function initBasket() {
     // Товары
     // let TITLES = [
     //     'MANGO PEOPLE T-SHIRT',
@@ -42,7 +42,7 @@ function initBasket() {
             let htmlStr = '';
 
             this.items.forEach((item, i) => {
-                htmlStr += renderBasketTemplate(item, i);
+                htmlStr += this.renderBasketTemplate(item, i);
             });
             this.container.innerHTML = htmlStr;
             this._calcSum();
@@ -102,11 +102,39 @@ function initBasket() {
         //         this.wrapper.style.display="none";
         //     }
         // )},
+
+        renderBasketTemplate(item, i) {
+            return `
+            <div class="cartFlex">
+                <div><img   src="${item.productImg}" alt="buy4"></div>
+        
+                <div class="textCenterCart">
+                    <div class="textByCart">${item.productName}</div>
+                <div>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>                  
+                <div class="priceCart">
+                    ${item.amount} x <span>${item.productPrice}</span> = ${item.amount * item.productPrice}
+                </div>
+                </div>
+                <div class="cartCircle">
+                    <a href="#" class="far fa-times-circle faCart" name="remove" data-id="${item.productId}"></a>
+                </div>        
+            </div> 
+            <div class="horizontal cartHorizontal"></div>   
+        `
+        }
     }
 
-    return basket
-    // basket.init();
-}
+    // return basket
+    basket.init();
+
+
+// }
 
 
 
@@ -133,31 +161,31 @@ function initBasket() {
 
 
 // Вывод DOM цикла с объектов (товары и цены)
-function renderBasketTemplate(item, i) {
-    return `
-    <div class="cartFlex">
-        <div><img   src="${item.productImg}" alt="buy4"></div>
+// function renderBasketTemplate(item, i) {
+//     return `
+//     <div class="cartFlex">
+//         <div><img   src="${item.productImg}" alt="buy4"></div>
 
-        <div class="textCenterCart">
-            <div class="textByCart">${item.productName}</div>
-        <div>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-        </div>                  
-        <div class="priceCart">
-            ${item.amount} x <span>${item.productPrice}</span> = ${item.amount * item.productPrice}
-        </div>
-        </div>
-        <div class="cartCircle">
-            <a href="#" class="far fa-times-circle faCart" name="remove" data-id="${item.productId}"></a>
-        </div>        
-    </div> 
-    <div class="horizontal cartHorizontal"></div>   
-`
-}
+//         <div class="textCenterCart">
+//             <div class="textByCart">${item.productName}</div>
+//         <div>
+//             <i class="far fa-star"></i>
+//             <i class="far fa-star"></i>
+//             <i class="far fa-star"></i>
+//             <i class="far fa-star"></i>
+//             <i class="far fa-star"></i>
+//         </div>                  
+//         <div class="priceCart">
+//             ${item.amount} x <span>${item.productPrice}</span> = ${item.amount * item.productPrice}
+//         </div>
+//         </div>
+//         <div class="cartCircle">
+//             <a href="#" class="far fa-times-circle faCart" name="remove" data-id="${item.productId}"></a>
+//         </div>        
+//     </div> 
+//     <div class="horizontal cartHorizontal"></div>   
+// `
+// }
 
 
 

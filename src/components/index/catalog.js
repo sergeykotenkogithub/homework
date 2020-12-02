@@ -1,4 +1,4 @@
-function initCatalog() {
+// function initCatalog() {
 
   // let TITLES = [
   //     'MANGO PEOPLE T-SHIRT',
@@ -60,8 +60,9 @@ function initCatalog() {
       }
   };
 
-  return catalog;
-}
+  // return catalog;
+  catalog.init(basket)
+// }
 
 
 
