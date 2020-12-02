@@ -1,17 +1,3 @@
-// function initCatalog() {
-
-  // let TITLES = [
-  //     'MANGO PEOPLE T-SHIRT',
-  //     'BANANA PEOPLE T-SHIRT',
-  //     'POTATO PEOPLE T-SHIRT',
-  //     'CUCUMBER PEOPLE T-SHIRT',
-  //     'PEPPER PEOPLE T-SHIRT',
-  //     'GOROKCH PEOPLE T-SHIRT',
-  //     'ORANGE PEOPLE T-SHIRT',
-  //     'KIWI PEOPLE T-SHIRT'
-  // ];
-  // let PRICES = [52, 68, 36.1, 700, 87, 50, 67.5, 120.03];
-
   const catalog = {
       items: [],
       container: null,
@@ -40,7 +26,7 @@
           let htmlStr = '';
 
           this.items.forEach((item, i) => {
-              htmlStr += renderCatalogTemplate(item, i);
+              htmlStr += this.renderCatalogTemplate(item, i);
           });
           this.container.innerHTML = htmlStr;
       },
@@ -57,58 +43,33 @@
                   // Находим товар, в basket.js мы добавляем
               }
           });
+      },
+     renderCatalogTemplate(item, i) {
+        return `
+        <div class="featuredBuyItem" id="catalog">
+        <!-- <a href="#"> Ссылка a, если надо, можно раскоментить -->
+          <div class="addToCart">
+            <div class="coverAddtoCart">
+              <div>
+                <!-- Задний фон картинки -->
+                <button class="backColor newBackColor"
+                              name="add"
+                              data-id="${item.productId}"
+                          >
+                          <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
+                          &nbsp ADD TO CART
+                          </button>          
+              </div>
+            </div>
+          </div>
+          <div><img src="${item.productImg}" /></div>
+        <!--  </a> -->
+        <div class="name_buy_item">${item.productName}</div>
+        <div class="price_item">$${item.productPrice}</div>
+      </div>
+        `
       }
   };
 
-  // return catalog;
   catalog.init(basket)
-// }
 
-
-
-
-// function getCatalogItems(TITLES, PRICES) {
-//   let arr = [];
-
-//   for (let i = 0; i < TITLES.length; i++) {
-//       arr.push(createCatalogItem(i, TITLES, PRICES));
-//   }
-
-//   return arr;
-// }
-
-
-// function createCatalogItem(index, TITLES, PRICES) {
-//   return {
-//       productName: TITLES[index],
-//       productPrice: PRICES[index],
-//       productId: `prod_${index + 1}` //'prod_1'
-//   }
-// }
-
-
-function renderCatalogTemplate(item, i) {
-  return `
-  <div class="featuredBuyItem" id="catalog">
-  <!-- <a href="#"> Ссылка a, если надо, можно раскоментить -->
-    <div class="addToCart">
-      <div class="coverAddtoCart">
-        <div>
-          <!-- Задний фон картинки -->
-          <button class="backColor newBackColor"
-                        name="add"
-                        data-id="${item.productId}"
-                    >
-                    <img class="cartBuy" src="../src/assets/images/carsBuy.png" alt="cartBuy" />
-                    &nbsp ADD TO CART
-                    </button>          
-        </div>
-      </div>
-    </div>
-    <div><img src="${item.productImg}" /></div>
-  <!--  </a> -->
-  <div class="name_buy_item">${item.productName}</div>
-  <div class="price_item">$${item.productPrice}</div>
-</div>
-  `
-}

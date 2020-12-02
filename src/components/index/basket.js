@@ -1,11 +1,10 @@
-// function initBasket() {
-    // Товары
-    // let TITLES = [
-    //     'MANGO PEOPLE T-SHIRT',
-    //     'BANANA PEOPLE T-SHIRT',
-    // ];
-    // let PRICES = [52, 68]; // ЦЕНЫ
-    // let AMOUNTS = [4, 2]; // Сколько штук данного товара
+    class AllItems {
+        constructor(items) {
+            this.items = []
+        }
+    }
+
+    const itemss = new AllItems
 
     const basket = {
         items: [], // массив с товара и ценами
@@ -27,7 +26,13 @@
            //async
           this._get(this.url) //Метод подключения к json на git
           .then(basket => { // название basket не влияет
-            this.items = basket.content;
+            
+            
+            this.items = basket.content; // content из url файла
+            // itemss.constructor(items) = basket.content
+            
+            
+            
             this._render();
             this._handleEvents();
           });
@@ -129,63 +134,7 @@
         `
         }
     }
-
-    // return basket
     basket.init();
-
-
-// }
-
-
-
-
-// function getBasketItems(TITLES, PRICES, AMOUNTS) {
-//     let arr = [];
-
-//     for (let i = 0; i < TITLES.length; i++) {
-//         arr.push(createBasketItem(i, TITLES, PRICES, AMOUNTS));
-//     }
-
-//     return arr;
-// }
-
-// // Возврат индексов
-// function createBasketItem(index, TITLES, PRICES, AMOUNTS) {
-//     return {
-//         productName: TITLES[index],
-//         productPrice: PRICES[index],
-//         productAmount: AMOUNTS[index],
-//         productId: `prod_${index + 1}` //'prod_1'
-//     }
-// }
-
-
-// Вывод DOM цикла с объектов (товары и цены)
-// function renderBasketTemplate(item, i) {
-//     return `
-//     <div class="cartFlex">
-//         <div><img   src="${item.productImg}" alt="buy4"></div>
-
-//         <div class="textCenterCart">
-//             <div class="textByCart">${item.productName}</div>
-//         <div>
-//             <i class="far fa-star"></i>
-//             <i class="far fa-star"></i>
-//             <i class="far fa-star"></i>
-//             <i class="far fa-star"></i>
-//             <i class="far fa-star"></i>
-//         </div>                  
-//         <div class="priceCart">
-//             ${item.amount} x <span>${item.productPrice}</span> = ${item.amount * item.productPrice}
-//         </div>
-//         </div>
-//         <div class="cartCircle">
-//             <a href="#" class="far fa-times-circle faCart" name="remove" data-id="${item.productId}"></a>
-//         </div>        
-//     </div> 
-//     <div class="horizontal cartHorizontal"></div>   
-// `
-// }
 
 
 
