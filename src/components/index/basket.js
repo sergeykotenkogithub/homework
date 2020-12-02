@@ -1,27 +1,29 @@
-    class AllItems {
-        constructor(items) {
-            this.items = []
+    class Query {
+        constructor(block) {
+            this.block = block
+        }
+        init(){
+          return document.querySelector(this.block)
         }
     }
 
-    const itemss = new AllItems
+    let query = new Query('#basket-items')
+    let queryInit = query.init()
 
     const basket = {
         items: [], // массив с товара и ценами
-        total: null,
         url: 'https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/basket.json',
-        container: null, // basket-items (В DOM <div> с товарами и ценами)
+        // container: null, // basket-items (В DOM <div> с товарами и ценами)
         wrapper: null, //basket all
         sum: 0, // 
         totalContainer: null,
         clickCart: null,
         // Инициализация. Основное
         init() { 
-            this.clickCart = document.querySelector('#clickCart');
-            this.container = document.querySelector('#basket-items');
+            
+            // this.container = document.querySelector('#basket-items');            
             this.wrapper = document.querySelector('#basket-inner');
             this.totalContainer = document.querySelector('#basket-sum');
-            // this.items = getBasketItems(TITLES, PRICES, AMOUNTS);
 
            //async
           this._get(this.url) //Метод подключения к json на git
@@ -29,7 +31,7 @@
             
             
             this.items = basket.content; // content из url файла
-            // itemss.constructor(items) = basket.content
+            // itemss = basket.content
             
             
             
@@ -49,7 +51,7 @@
             this.items.forEach((item, i) => {
                 htmlStr += this.renderBasketTemplate(item, i);
             });
-            this.container.innerHTML = htmlStr;
+            queryInit.innerHTML = htmlStr;
             this._calcSum();
         },
 
@@ -95,18 +97,12 @@
            });
            
             //Удаление
-           this.container.addEventListener('click', event => {
+            queryInit.addEventListener('click', event => {
             if(event.target.name == 'remove') {
                 this._remove(event.target.dataset.id)
             }
         });
         },
-        // _handleEvents2() {
-        //     document.addEventListener("click", event => {
-        //         if(event.target.offsetParent.id != 'clickCart')
-        //         this.wrapper.style.display="none";
-        //     }
-        // )},
 
         renderBasketTemplate(item, i) {
             return `
