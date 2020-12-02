@@ -31,6 +31,7 @@
 
       @media (max-width: 991px) {
         grid-row: 3;
+        grid-column: 1;
       }
     }
 
@@ -40,6 +41,10 @@
       width: 20px;
       margin-left: auto;
       position: relative;
+
+      @media (max-width: 991px) {
+        margin-left: 80%;
+      }
     }
   }
 }
@@ -78,6 +83,10 @@
   border-radius: 3px 3px 3px 3px;
   overflow: hidden; /* то что вылазит за блоком\тегом будет скрыто */
   /* По умолчанию  justify-content: идёт flex-star поэтому они приклеились, нет расстояния */
+
+  @media (max-width: 991px) {
+    grid-row: 2;
+  }
 
   .searchBrowse {
     width: 87px;
@@ -272,4 +281,11 @@
 
 .hidden {
   display: none !important;
+}
+
+.basketClass {
+  @media (max-width: 991px) {
+    grid-row: 3;
+    grid-column: 1;
+  }
 }

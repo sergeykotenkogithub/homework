@@ -1,6 +1,7 @@
     class Query {
         constructor(block) {
             this.block = block
+            this.init()
         }
         init(){
           return document.querySelector(this.block)
@@ -11,6 +12,8 @@
     let container = containerClass.init()
     let wrapperClass = new Query('#basket-inner')
     let wrapper = wrapperClass.init()
+    let totalContainerClass =  new Query('#basket-sum')
+    let totalContainer = totalContainerClass.init()
 
     const basket = {
         items: [], // массив с товара и ценами
@@ -18,14 +21,14 @@
         // container: null, // basket-items (В DOM <div> с товарами и ценами)
         // wrapper: null, //basket all
         sum: 0, // 
-        totalContainer: null,
+        // totalContainer: null,
         clickCart: null,
         // Инициализация. Основное
         init() { 
             
             // this.container = document.querySelector('#basket-items');            
             // this.wrapper = document.querySelector('#basket-inner');
-            this.totalContainer = document.querySelector('#basket-sum');
+            // this.totalContainer = document.querySelector('#basket-sum');
 
            //async
           this._get(this.url) //Метод подключения к json на git
@@ -64,7 +67,7 @@
                 this.sum += item.amount * item.productPrice;
             });
 
-            this.totalContainer.innerText = this.sum;
+            totalContainer.innerText = this.sum;
         },
 
         // В item мы пробрасываем объект, содержащий данные в том числе и id
