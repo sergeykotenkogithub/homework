@@ -7,14 +7,16 @@
         }
     }
 
-    let query = new Query('#basket-items')
-    let queryInit = query.init()
+    let containerClass = new Query('#basket-items')
+    let container = containerClass.init()
+    let wrapperClass = new Query('#basket-inner')
+    let wrapper = wrapperClass.init()
 
     const basket = {
         items: [], // массив с товара и ценами
         url: 'https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/basket.json',
         // container: null, // basket-items (В DOM <div> с товарами и ценами)
-        wrapper: null, //basket all
+        // wrapper: null, //basket all
         sum: 0, // 
         totalContainer: null,
         clickCart: null,
@@ -22,7 +24,7 @@
         init() { 
             
             // this.container = document.querySelector('#basket-items');            
-            this.wrapper = document.querySelector('#basket-inner');
+            // this.wrapper = document.querySelector('#basket-inner');
             this.totalContainer = document.querySelector('#basket-sum');
 
            //async
@@ -51,7 +53,7 @@
             this.items.forEach((item, i) => {
                 htmlStr += this.renderBasketTemplate(item, i);
             });
-            queryInit.innerHTML = htmlStr;
+            container.innerHTML = htmlStr;
             this._calcSum();
         },
 
@@ -92,12 +94,12 @@
         },
         _handleEvents() {          
            document.querySelector('#basket-btn').addEventListener('click', e => {
-            this.wrapper.classList.toggle('hidden')
+            wrapper.classList.toggle('hidden')
             // toggle убирает класс, а если есть то добовляет, вот и получается что при нажатиее он показывается, а при втором закрывается (hidden в _header.scss)
            });
            
             //Удаление
-            queryInit.addEventListener('click', event => {
+            container.addEventListener('click', event => {
             if(event.target.name == 'remove') {
                 this._remove(event.target.dataset.id)
             }
