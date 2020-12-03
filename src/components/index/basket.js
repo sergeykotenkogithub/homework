@@ -5,13 +5,6 @@ class Query {
         this.query = query
         // this.url = url       
     }
-    // fdd() { 
-    //     urlCatalog.then(catalog => {
-    //     itemss = catalog; // тут items был массивом (можно даже ему null задать, ничего не поменяется) и стал подтягивать массив из url
-    //     catalog._render();
-    //     catalog._handleEvents();
-    //   });
-    // }
     init(){
     return document.querySelector(this.query)
     }

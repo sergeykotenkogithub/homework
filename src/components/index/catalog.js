@@ -4,9 +4,6 @@ let urlClassCatalog = new Query('https://raw.githubusercontent.com/sergeykotenko
 let urlCatalog = urlClassCatalog.get()  
 let containerClassCatalog = new Query('#catalog')
 let containerCatalog = containerClassCatalog.init()
-// let initCatalogClass = new Query(urlCatalog)
-// let initCatalog = initCatalogClass.fdd()
-
 
 const catalog = {
     items: [],
