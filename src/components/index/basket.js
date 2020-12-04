@@ -3,6 +3,7 @@ let itemss = []
 class Query {
     constructor(query) {
         this.query = query
+        this.item = []
         // this.url = url       
     }
     init(){
