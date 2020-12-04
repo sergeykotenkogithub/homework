@@ -5,14 +5,14 @@ class QueryCatalog extends Query {
   super(query)
   this.basket = basket;
   }
-  int(basket){    
+  init(){    
     urlCatalog.then(catalog => {
       this.items = catalog; // тут items был массивом (можно даже ему null задать, ничего не поменяется) и стал подтягивать массив из url
-      this.render();
-      this.handleEvents();
+      this._render();
+      this._handleEvents();
     })    
   }
-  render() {
+  _render() {
     let htmlStr = '';
 
     this.items.forEach((item, i) => {
@@ -20,7 +20,7 @@ class QueryCatalog extends Query {
     });
     containerCatalog.innerHTML = htmlStr;
   }
-  handleEvents() {
+  _handleEvents() {
     containerCatalog.addEventListener('click', event => {
           if(event.target.name == 'add') {
               // console.log('КУПЛЕНО!')
@@ -60,14 +60,12 @@ class QueryCatalog extends Query {
   }
 }
 
-
-let urlClassCatalog = new QueryCatalog('https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/catalog.json')
-let urlCatalog = urlClassCatalog.get()  
+let urlClassCatalog = new QueryCatalog('https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/catalog.json') // url catalog
+let urlCatalog = urlClassCatalog.get()  //
 let containerClassCatalog = new QueryCatalog('#catalog')
-let containerCatalog = containerClassCatalog.init()
-
+let containerCatalog = containerClassCatalog.initQuery()
 let imitCatalogAll = new QueryCatalog()
-let initCatalog = imitCatalogAll.int()
+let initCatalog = imitCatalogAll.init()
 
 
 

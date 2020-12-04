@@ -1,4 +1,3 @@
-let itemss = []
 
 class Query {
     constructor(query) {
@@ -6,7 +5,7 @@ class Query {
         this.item = []
         // this.url = url       
     }
-    init(){
+    initQuery(){
     return document.querySelector(this.query)
     }
     // Метод подключения к json на git
@@ -19,11 +18,11 @@ class Query {
  } 
 
 let containerClass = new Query('#basket-items')
-let container = containerClass.init()
+let container = containerClass.initQuery()
 let wrapperClass = new Query('#basket-inner')
-let wrapper = wrapperClass.init()
+let wrapper = wrapperClass.initQuery()
 let totalContainerClass =  new Query('#basket-sum')
-let totalContainer = totalContainerClass.init()
+let totalContainer = totalContainerClass.initQuery()
 
 let urlClass = new Query('https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/basket.json')
 let url = urlClass.get()
