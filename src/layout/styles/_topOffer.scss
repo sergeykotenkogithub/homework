@@ -66,3 +66,12 @@
     margin-top: 0;
   }
 }
+
+.container,
+.container-lg,
+.container-md,
+.container-sm {
+  @media (min-width: 992px) {
+    max-width: 1200px !important;
+  }
+}

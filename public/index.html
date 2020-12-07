@@ -38,7 +38,7 @@
           </form>
 
           <!-- Подгрузка с Js корзины  -->
-          <div id="basket">
+          <div class="basketClass" id="basket">
             <div class="img_Cart_header" id="clickCart" name>
               <div class="cartScale">
                 <img
@@ -46,7 +46,8 @@
                   src="../src/assets/images/cars.jpg"
                   alt="cars"
                   id="basket-btn"
-                /><span class="cartNumber">2</span>
+                />
+                <span class="cartNumber">2</span>
               </div>
               <div class="buyCart hidden" id="basket-inner">
                 <div class="cartBuyItems" id="basket-items"></div>
@@ -468,13 +469,6 @@
 
     <script src="../src/components/index/basket.js"></script>
     <script src="../src/components/index/catalog.js"></script>
-
-    <script>
-      var basket = initBasket();
-      basket.init();
-
-      var catalog = initCatalog();
-      catalog.init(basket);
-    </script>
+    
   </body>
 </html>
