@@ -1,15 +1,15 @@
 class Catalog {
-  constructor(basket) {
+  constructor(basket, container = "#catalog", url = "/catalog.json") {
     this.items = [];
-    this.container = basket;
+    this.container = document.querySelector(container);
     this.basket = basket;
     this.url =
-      "https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/catalog.json";
+      "https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json" +
+      url;
     this._init();
   }
 
   _init() {
-    this.container = document.querySelector("#catalog");
     // this.items = getCatalogItems(TITLES, PRICES);
 
     //async

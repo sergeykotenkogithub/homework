@@ -1,24 +1,26 @@
 class Basket {
-  constructor() {
+  constructor(container = "#basket-items", url = "/basket.json") {
     this.items = []; // массив с товара и ценами
     this.total = null;
-    (this.url =
-      "https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/basket.json"),
-      (this.container = null); // basket-items (В DOM <div> с товарами и ценами)
+    this.url =
+      "https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json" +
+      url;
+    this.container = document.querySelector(container); // basket-items (В DOM <div> с товарами и ценами)
     this.wrapper = null; //basket all
     this.sum = 0; //
+    this.num = 0;
     this.totalContainer = null;
     this.clickCart = null;
+    this.cartNumber = null;
     this._init();
   }
 
   // Инициализация. Основное
   _init() {
     this.clickCart = document.querySelector("#clickCart");
-    this.container = document.querySelector("#basket-items");
     this.wrapper = document.querySelector("#basket-inner");
     this.totalContainer = document.querySelector("#basket-sum");
-    // this.items = getBasketItems(TITLES, PRICES, AMOUNTS);
+    this.cartNumber = document.querySelector("#cartNumber");
 
     //async
     this._get(this.url) //Метод подключения к json на git
@@ -28,7 +30,6 @@ class Basket {
         this._render();
         this._handleEvents();
       });
-    // this._handleEvents2()
   }
 
   _get(url) {
@@ -48,17 +49,22 @@ class Basket {
   // Подсчёт стоимости общей
   _calcSum() {
     this.sum = 0;
+    this.num = 0;
     this.items.forEach((item) => {
       this.sum += item.amount * item.productPrice;
+      this.num += item.amount;
     });
 
     this.totalContainer.innerText = this.sum;
+    this.cartNumber.innerText = this.num;
   }
 
   // В item мы пробрасываем объект, содержащий данные в том числе и id
   // item мы находим через catalog.js
   add(item) {
     let find = this.items.find((el) => item.productId == el.productId);
+    // let cartNumber = document.querySelector(".cartNumber");
+    // cartNumber.innerHTML = find.amount++;
 
     if (find) {
       find.amount++;
