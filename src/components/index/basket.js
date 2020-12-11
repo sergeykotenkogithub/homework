@@ -1,7 +1,6 @@
 class Basket {
   constructor(container = "#basket-items", url = "/basket.json") {
     this.items = []; // массив с товара и ценами
-    this.total = null;
     this.url =
       "https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json" +
       url;
