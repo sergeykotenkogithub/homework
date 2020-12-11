@@ -1,13 +1,16 @@
-const catalog = {
-  items: [],
-  container: null,
-  basket: null,
-  url:
-    "https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/catalog.json",
-  init(basket) {
+class Catalog {
+  constructor(basket) {
+    this.items = [];
+    this.container = basket;
+    this.basket = basket;
+    this.url =
+      "https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/catalog.json";
+    this._init();
+  }
+
+  _init() {
     this.container = document.querySelector("#catalog");
     // this.items = getCatalogItems(TITLES, PRICES);
-    this.basket = basket;
 
     //async
     this._get(this.url) //Метод подключения к json на git
@@ -16,12 +19,12 @@ const catalog = {
         this._render();
         this._handleEvents();
       });
-  },
+  }
 
   // Метод подключения к json на git
   _get(url) {
     return fetch(url).then((d) => d.json()); // сделает запрос за джейсоном, дождётся ответа и преобразует json в объект, который вернётся из даного метода
-  },
+  }
 
   _render() {
     let htmlStr = "";
@@ -30,7 +33,7 @@ const catalog = {
       htmlStr += this.renderCatalogTemplate(item, i);
     });
     this.container.innerHTML = htmlStr;
-  },
+  }
 
   _handleEvents() {
     this.container.addEventListener("click", (event) => {
@@ -44,7 +47,7 @@ const catalog = {
         // Находим товар, в basket.js мы добавляем
       }
     });
-  },
+  }
 
   renderCatalogTemplate(item, i) {
     return `
@@ -70,7 +73,7 @@ const catalog = {
     <div class="price_item">$${item.productPrice}</div>
   </div>
     `;
-  },
-};
+  }
+}
 
-catalog.init(basket);
+let catalog = new Catalog(basket);

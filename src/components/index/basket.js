@@ -1,15 +1,19 @@
-const basket = {
-  items: [], // массив с товара и ценами
-  total: null,
-  url:
-    "https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/basket.json",
-  container: null, // basket-items (В DOM <div> с товарами и ценами)
-  wrapper: null, //basket all
-  sum: 0, //
-  totalContainer: null,
-  clickCart: null,
+class Basket {
+  constructor() {
+    this.items = []; // массив с товара и ценами
+    this.total = null;
+    (this.url =
+      "https://raw.githubusercontent.com/sergeykotenkogithub/imageProject/main/json/basket.json"),
+      (this.container = null); // basket-items (В DOM <div> с товарами и ценами)
+    this.wrapper = null; //basket all
+    this.sum = 0; //
+    this.totalContainer = null;
+    this.clickCart = null;
+    this._init();
+  }
+
   // Инициализация. Основное
-  init() {
+  _init() {
     this.clickCart = document.querySelector("#clickCart");
     this.container = document.querySelector("#basket-items");
     this.wrapper = document.querySelector("#basket-inner");
@@ -25,11 +29,11 @@ const basket = {
         this._handleEvents();
       });
     // this._handleEvents2()
-  },
+  }
 
   _get(url) {
     return fetch(url).then((d) => d.json()); // сделает запрос за джейсоном, дождётся ответа и преобразует json в объект, который вернётся из даного метода
-  },
+  }
 
   _render() {
     let htmlStr = "";
@@ -39,7 +43,7 @@ const basket = {
     });
     this.container.innerHTML = htmlStr;
     this._calcSum();
-  },
+  }
 
   // Подсчёт стоимости общей
   _calcSum() {
@@ -49,7 +53,7 @@ const basket = {
     });
 
     this.totalContainer.innerText = this.sum;
-  },
+  }
 
   // В item мы пробрасываем объект, содержащий данные в том числе и id
   // item мы находим через catalog.js
@@ -63,7 +67,7 @@ const basket = {
     }
 
     this._render();
-  },
+  }
   //
   _remove(id) {
     let find = this.items.find((el) => el.productId == id);
@@ -75,7 +79,7 @@ const basket = {
     }
 
     this._render();
-  },
+  }
   _handleEvents() {
     document.querySelector("#basket-btn").addEventListener("click", (e) => {
       this.wrapper.classList.toggle("hidden");
@@ -88,7 +92,7 @@ const basket = {
         this._remove(event.target.dataset.id);
       }
     });
-  },
+  }
 
   renderBasketTemplate(item, i) {
     return `
@@ -118,7 +122,7 @@ const basket = {
             </div> 
             <div class="horizontal cartHorizontal"></div>   
         `;
-  },
-};
+  }
+}
 
-basket.init();
+let basket = new Basket();
