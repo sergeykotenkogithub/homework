@@ -55,7 +55,9 @@
       @media (max-width: 991px) {
         .header .container .myAccount {
           -ms-grid-row: 3;
-          grid-row: 3; } }
+          grid-row: 3;
+          -ms-grid-column: 1;
+          grid-column: 1; } }
     .header .container .img_Cart_header {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -66,6 +68,9 @@
       width: 20px;
       margin-left: auto;
       position: relative; }
+      @media (max-width: 991px) {
+        .header .container .img_Cart_header {
+          margin-left: 80%; } }
 
 .noDecor {
   text-decoration: none !important;
@@ -102,6 +107,10 @@
   overflow: hidden;
   /* то что вылазит за блоком\тегом будет скрыто */
   /* По умолчанию  justify-content: идёт flex-star поэтому они приклеились, нет расстояния */ }
+  @media (max-width: 991px) {
+    .topSearch {
+      -ms-grid-column: 1;
+      grid-column: 1; } }
   .topSearch .searchBrowse {
     width: 87px;
     border: none;
@@ -270,7 +279,7 @@
   font-size: 13px;
   background: none; }
 
-.cartNumber {
+#cartNumber {
   position: absolute;
   background: #f16d7f;
   border-radius: 50%;
@@ -290,6 +299,20 @@
 
 .hidden {
   display: none !important; }
+
+@media (max-width: 991px) {
+  #basket {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 3;
+    grid-row: 3; } }
+
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 1130px !important; } }
 
 .topNav nav {
   -ms-flex-wrap: wrap;
@@ -353,7 +376,7 @@
     font-weight: 700; }
   .menuSmall a:hover:not(:last-of-type) {
     color: #f16d7f;
-    text-shadow: 0.2px 0.2px 0 #f16d7f, 0.2px -0.2px 0 #f16d7f, -0.2px 0.2px 0 #f16d7f, -0.2px -0.2px 0 #f16d7f, 0.2px 0px 0 #f16d7f, 0px 0.2px 0 #f16d7f, -0.2px 0px 0 #f16d7f, 0px -0.2px 0 #f16d7f;
+    text-shadow: 0.2px 0.2px 0 #f16d7f, 0.2px -0.2px 0 #f16d7f, -0.2px 0.2px 0 #f16d7f, -0.2px -0.2px 0 #f16d7f, 0.2px 0px 0 #f16d7f, 0px 0.2px 0 #f16d7f, -0.2px 0px 0 #f16d7f, 0px -0.2px 0 #f16d7f;
     /* text-shadow: 0 0 0.9px #f16d7f, 0 0 0.9px #f16d7f, 0 0 0.9px #f16d7f; Как ещё один способ, но тени более видны*/ }
 
 .newArrivalsText {
@@ -946,7 +969,6 @@
       font-weight: 900;
       color: #222222;
       line-height: 46px;
-      position: relative;
       top: -1px; }
     .promo .promoWrap .promoBottomText {
       font-size: 40px;

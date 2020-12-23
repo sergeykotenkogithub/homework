@@ -31,6 +31,7 @@
 
       @media (max-width: 991px) {
         grid-row: 3;
+        grid-column: 1;
       }
     }
 
@@ -40,6 +41,10 @@
       width: 20px;
       margin-left: auto;
       position: relative;
+
+      @media (max-width: 991px) {
+        margin-left: 80%;
+      }
     }
   }
 }
@@ -78,6 +83,10 @@
   border-radius: 3px 3px 3px 3px;
   overflow: hidden; /* то что вылазит за блоком\тегом будет скрыто */
   /* По умолчанию  justify-content: идёт flex-star поэтому они приклеились, нет расстояния */
+
+  @media (max-width: 991px) {
+    grid-column: 1;
+  }
 
   .searchBrowse {
     width: 87px;
@@ -254,7 +263,7 @@
   background: none;
 }
 
-.cartNumber {
+#cartNumber {
   position: absolute;
   background: #f16d7f;
   border-radius: 50%;
@@ -272,4 +281,20 @@
 
 .hidden {
   display: none !important;
+}
+
+#basket {
+  @media (max-width: 991px) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm {
+  @media (min-width: 992px) {
+    max-width: 1130px !important;
+  }
 }
